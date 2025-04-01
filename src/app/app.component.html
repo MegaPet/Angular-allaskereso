@@ -1,0 +1,15 @@
+<app-menu (selected_page)="change_page($event)"></app-menu>
+@switch (this.current_page) { 
+  @case ("fomenu") {
+  <app-home></app-home>
+  }
+  @case ("keres") {
+  <app-search></app-search>
+  }
+  @case ("profil") {
+    <app-profile></app-profile>
+  }
+  @default {
+    <h1>404 Web page not found</h1>
+  }
+}

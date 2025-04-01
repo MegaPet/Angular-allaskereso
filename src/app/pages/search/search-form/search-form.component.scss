@@ -1,0 +1,48 @@
+@import '../../../../variables.scss';
+
+form{
+  display: flex;
+  flex-direction: column;
+  // outline: 1px solid red;
+  .input{
+    position: relative;
+    cursor: pointer;
+    &__label{
+      // outline: 10px solid yellow;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 0.6rem;
+      margin: 0;
+      background: pink;
+      white-space: nowrap;
+      transform: translate(0,0);
+      transform-origin: 0 0;
+      background-color: $l_main;
+      transition: 120ms ease-in-out;
+      line-height: 1.2;
+    }
+
+    &__field {
+      // outline: 1px solid purple;
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      border: 3px solid $l_black;
+      padding: .5rem;
+      color: currentColor;
+      background: transparent;
+      border-radius: 4px;
+    }
+
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      .input__label {
+        transform: translate(.25rem, -65%) scale(.8);
+        color: var($l_black);
+        border-color : $l_focus
+      }
+    }
+  }
+}

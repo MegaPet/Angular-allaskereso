@@ -1,0 +1,17 @@
+@import 'variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: $l_black;
+  font-family: $font;
+  font-weight: 400;
+  font-style: normal;
+
+  &::selection{
+    background-color: $l_sec;
+    color: $l_black;
+  }
+}

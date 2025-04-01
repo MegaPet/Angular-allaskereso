@@ -1,0 +1,35 @@
+@import "../../../../variables.scss";
+
+.head-start{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $l_main;
+  background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+  overflow: hidden;
+  gap: 5rem;
+  
+  height: 100vh;
+}
+
+.title{
+  outline: 0.225rem solid $l_sec;
+  padding: 0.415rem;
+  border-radius: .1rem;
+  background-color: $l_sec;
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: 10rem;
+}
+
+.sub{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  
+  h2{
+    font-size: 2rem;
+  }
+}
