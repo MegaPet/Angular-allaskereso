@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-
+import { HeroDesignDirective } from '../../../directives/hero-design.directive';
+import { MyDatePipe } from '../../../pipes/my-date.pipe';
 @Component({
   selector: 'app-title-card',
   imports: [],
@@ -9,14 +10,7 @@ import { Component, Input } from '@angular/core';
 export class TitleCardComponent {
   date = new Date();
 
-  get_date(): string {
-    return this.date.toDateString();
-  }
 
-  get_month(): string {
-    const month_date = this.date.toLocaleString('hu-HU', { month: 'short' });
-    return month_date[0].toUpperCase() + month_date.substring(1);
-  }
 
 }
 

@@ -1,24 +1,33 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// import { NavBarComponent } from "./shared/nav-bar/nav-bar.component";
-import { HomeComponent } from "./pages/home/home.component";
-import { MenuComponent } from "./shared/menu/menu.component";
-import { SearchComponent } from './pages/search/search.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 @Component({
   selector: 'root',
-  imports: [/*RouterOutlet,*/ HomeComponent, MenuComponent, SearchComponent, ProfileComponent],
+  imports: [
+    RouterOutlet,
+    NavBarComponent,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatIconModule
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
-
 export class AppComponent {
-  title = "ProfSession"
+  title = 'ProfSession';
 
-  current_page = "keres";
+  is_logged = false;
 
-  change_page(page: string) : void{
-    this.current_page = page;
+  
+  
+  onToggleSidenav(sidenav: MatSidenav){
+    sidenav.toggle();
   }
 }

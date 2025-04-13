@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "username": "john_doe",
+      "password": "password123"
+    },
+    {
+      "username": "jane_smith",
+      "password": "securepass456"
+    },
+    {
+      "username": "mike_jordan",
+      "password": "mj23goat"
+    },
+    {
+      "username": "lisa_white",
+      "password": "lisa_987"
+    },
+    {
+      "username": "david_black",
+      "password": "davepass321"
+    }
+  ],
+  "work_offers": [
+    {
+      "title": "Frontend fejlesztő",
+      "location": "Budapest",
+      "keywords": [
+        "Angular",
+        "TypeScript",
+        "CSS",
+        "Responsive Design"
+      ],
+      "salary": "Br. 650.000 - 850.000 Ft/hó",
+      "experience": "2+ év",
+      "description": "Modern webes alkalmazások fejlesztése Angular keretrendszerben. Csapatmunka, verziókövetés, reszponzív design készítése."
+    },
+    {
+      "title": "Rendszergazda",
+      "location": "Debrecen",
+      "keywords": [
+        "Linux",
+        "Hálózat",
+        "Szerverkarbantartás"
+      ],
+      "salary": "Br. 500.000 - 700.000 Ft/hó",
+      "experience": "3+ év",
+      "description": "Vállalati IT infrastruktúra karbantartása, hibaelhárítás, biztonsági mentések kezelése."
+    },
+    {
+      "title": "Adatbázis-kezelő szakértő",
+      "location": "Szeged",
+      "keywords": [
+        "SQL",
+        "Oracle",
+        "Adatmodellezés"
+      ],
+      "salary": "Br. 700.000 - 900.000 Ft/hó",
+      "experience": "4+ év",
+      "description": "Komplex adatbázis-rendszerek fejlesztése, optimalizálása és üzemeltetése különböző platformokon."
+    },
+    {
+      "title": "Mobilalkalmazás fejlesztő",
+      "location": "Pécs",
+      "keywords": [
+        "Flutter",
+        "Dart",
+        "iOS",
+        "Android"
+      ],
+      "salary": "Br. 600.000 - 850.000 Ft/hó",
+      "experience": "2+ év",
+      "description": "Keresztplatformos mobilalkalmazások fejlesztése Flutter segítségével, tesztelés és publikálás."
+    },
+    {
+      "title": "Projektmenedzser",
+      "location": "Győr",
+      "keywords": [
+        "Agilis",
+        "Kommunikáció",
+        "Határidők"
+      ],
+      "salary": "Br. 800.000 - 1.100.000 Ft/hó",
+      "experience": "5+ év",
+      "description": "IT projektek vezetése agilis módszertan szerint, ügyfélkapcsolat menedzselése és csapatirányítás."
+    }
+  ]
+}

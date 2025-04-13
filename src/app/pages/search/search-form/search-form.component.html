@@ -1,10 +1,32 @@
-<form action="#" method="post">
-  
-  
-  <label class="input">
-    <input type="text" class="input__field" placeholder="" />
-    <span class="input__label">Cégre szűrés</span>
-  </label>
+<!-- <section>
+  <form [formGroup]="allas_form" (ngSubmit)="submitApplication()">
+    <label for="allas_kulcsszo">Kulcsszó</label>
+    <input type="text" formControlName="allas_kulcsszo" />
 
+    <label for="allas_kulcsszo">Település</label>
+    <input type="text" formControlName="allas_telepules" />
 
-</form>
+    <button type="submit">Keresés</button>
+  </form>
+</section> -->
+
+  <mat-card>
+    <mat-card-header>Keresés</mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="allas_form" (ngSubmit)="submitApplication()">
+        <div class="form-row">
+          <mat-form-field>
+            <mat-label>Kulcsszó</mat-label>
+            <input matInput formControlName="allas_kulcsszo" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Település</mat-label>
+            <input matInput formControlName="allas_telepules" />
+          </mat-form-field>
+          <button mat-flat-button>Keresés</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+

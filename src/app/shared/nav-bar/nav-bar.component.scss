@@ -1,33 +1,22 @@
-@import '../../../variables.scss';
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 0 !important;
+}
 
-nav{
-  background-color: $l_focus;
-  height: fit-content;
+.mdc-list-item:focus::before {
+  opacity: 0 !important;
+}
+
+.active-list-item {
+  background-color: rgba(90, 74, 247, 0.3);
+  color: white;
+  font-weight: bold;
+}
+
+mat-nav-list {
+  min-width: 200px;
   display: flex;
-  align-items: center;
-  padding: 0 2rem ;
-  position: fixed;
-  width: 100vw;
-
-  #logo{
-      margin-right: auto;
-      padding: 1rem 2rem;
-  }
-
-  p{
-    color: $l_main;
-  }
-
-  a{
-    text-decoration: none;
-    color: $l_main;
-    padding: 1rem 2rem;
-    transition: 0.3s ease-in-out;
-    background-color: $l_focus;      
-
-    &:hover{
-      background-color: $l_main;
-      color: $l_black;
-    }
-  }
+  flex-direction: column;
 }

@@ -1,15 +1,30 @@
-<app-menu (selected_page)="change_page($event)"></app-menu>
-@switch (this.current_page) { 
-  @case ("fomenu") {
-  <app-home></app-home>
-  }
-  @case ("keres") {
-  <app-search></app-search>
-  }
-  @case ("profil") {
-    <app-profile></app-profile>
-  }
-  @default {
-    <h1>404 Web page not found</h1>
-  }
-}
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-nav-bar [is_logged]="is_logged" [sidenav]="sidenav"></app-nav-bar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        mat-button
+        class="menu-toggle-button"
+        (click)="onToggleSidenav(sidenav)"
+        class="menu-toggle-button"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="/home">Kezdőlap</a></li>
+          <li><a href="/search">Keresés</a></li>
+          @if (is_logged) {
+          <li><a href="/profile">Profil</a></li>
+          } @else {
+          <li><a href="/log-in">Bejelentkezés</a></li>
+          <li><a href="/register">Regisztráció</a></li>
+          }
+        </ul>
+      </nav>
+    </mat-toolbar>
+    <router-outlet />
+  </mat-sidenav-content>
+</mat-sidenav-container>

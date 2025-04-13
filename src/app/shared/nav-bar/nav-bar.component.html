@@ -1,6 +1,36 @@
-<nav>
+<!-- <nav>
   <p id="logo">Logo</p>
-  <a href="http://#">Főmenü</a>
-  <a href="#">Keresés</a>
-  <a href="#">Profil</a>
-</nav>
+  <a href="/home">Főmenü</a>
+  <a href="/search">Keresés</a>
+  @if (is_logged) {
+  <a href="/profile">Profil</a>
+  }@else {
+  <a href="/log-in">Bejelentkezés</a>
+  <a href="/register">Regisztráció</a>
+  }
+</nav> -->
+
+<mat-nav-list>
+  <a mat-list-item routerLink="/home" routerLink="active-list-item" (click)="closeMenu()">
+    <mat-icon matListItemIcon>home</mat-icon>
+    <span matListItemTitle>Kezdőlap</span>
+  </a>
+  <a mat-list-item routerLink="/search">
+    <mat-icon matListItemIcon>search</mat-icon>
+    <span matListItemTitle>Keresés</span>
+  </a>
+  @if (is_logged) {
+  <a mat-list-item routerLink="/profile">
+    <mat-icon matListItemIcon>profile</mat-icon>
+    <span matListItemTitle>Profil</span>
+  </a>
+  }@else {
+  <a mat-list-item routerLink="/log-in">
+    <mat-icon matListItemIcon>login</mat-icon>
+    <span matListItemTitle>Bejelentkezés</span> </a
+  ><a mat-list-item routerLink="/register">
+    <mat-icon matListItemIcon>app_registration</mat-icon>
+    <span matListItemTitle>Regisztráció</span>
+  </a>
+  }
+</mat-nav-list>

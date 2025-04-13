@@ -1,4 +1,5 @@
-<app-nav-bar></app-nav-bar>
 <main>
-  <app-search-form></app-search-form>
+  <app-search-form (allasok)="set_allasok($event)"></app-search-form>
+    <!-- Tábla megjelenítése -->
+    <app-data-table [filter]="allas"></app-data-table>
 </main>

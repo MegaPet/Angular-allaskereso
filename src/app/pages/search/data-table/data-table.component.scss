@@ -1,0 +1,21 @@
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+/* Optional: Add some styling to make it look better */
+.mat-table {
+  min-width: 600px; /* Or whatever minimum width you need */
+  width: 100%;
+}
+
+.light{
+  background-color: antiquewhite;
+  color: black;
+}
+
+.dark{
+  background-color: darkslategray;
+  color: antiquewhite;
+}

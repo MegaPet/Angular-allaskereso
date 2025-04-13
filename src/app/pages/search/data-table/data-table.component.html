@@ -1,0 +1,53 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <mat-radio-group aria-label="Select an option" (change)="onThemeChange($event.value)">
+      <mat-radio-button value="light" checked>Világos</mat-radio-button>
+      <mat-radio-button value="dark">Sötét</mat-radio-button>
+    </mat-radio-group>
+  </mat-card-content>
+
+  <mat-card-content>
+    @if(is_mappped){
+    <table mat-table [dataSource]="_filtered_work_offers">
+      <ng-container matColumnDef="title" >
+        <th mat-header-cell *matHeaderCellDef>Megnevezés</th>
+        <td appHighlight mat-cell *matCellDef="let element" >{{ element.title }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="location">
+        <th mat-header-cell *matHeaderCellDef>Hely</th>
+        <td appHighlight mat-cell *matCellDef="let element">{{ element.location }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="keywords">
+        <th mat-header-cell *matHeaderCellDef>Kulcsszavak</th>
+        <td appHighlight mat-cell *matCellDef="let element">
+          @for (item of element.keywords; track $index) {
+          {{ item + ", " }}
+          }
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="salary">
+        <th mat-header-cell *matHeaderCellDef>Fizetés</th>
+        <td appHighlight mat-cell *matCellDef="let element">{{ element.salary }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="experience">
+        <th mat-header-cell *matHeaderCellDef>Tapasztalat</th>
+        <td appHighlight mat-cell *matCellDef="let element">{{ element.experience }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Leírás</th>
+        <td appHighlight mat-cell *matCellDef="let element">{{ element?.description }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr  mat-row *matRowDef="let myRowData; columns: displayedColumns"></tr>
+    </table>
+    }
+  </mat-card-content>
+</mat-card>
+
+<div class="table-container"></div>
