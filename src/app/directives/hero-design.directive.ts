@@ -10,17 +10,16 @@ import { MyDatePipe } from '../pipes/my-date.pipe';
 
 
 @Directive({
-  selector: '[appHeroDesign]'
+  selector: '[HeroDesign]'
 })
 export class HeroDesignDirective {
 
   private renderer = inject(Renderer2)
   private el = inject(ElementRef)
 
-  constructor() { }
+  constructor() {
+    this.el.nativeElement.style.fontStyle="italic"
+   }
 
-  OnInit(){
-    this.renderer.setStyle(this.el.nativeElement, "font-style", "italic")
-  }
 
 }
